@@ -17,14 +17,16 @@ def welcome():
 def play(roller=GameLogic.roll_dice):
     round_num = 1
     total_score = 0
+    all_kept_dice = []
+    kept_score = []
+    round_score = 0
     while playing:
-        print("Rolling 6 dice...")
-        roll = roller(6)
+        print(f"Rolling {6 - len(all_kept_dice)} dice...")
+
         roll_string = ""
         roll_list = []
-        all_kept_dice = []
-        kept_score = []
-        round_score = 0
+
+        roll = roller(6 - len(all_kept_dice))
         for x in roll:
             roll_string += str(x) + " "
             roll_list.append(x)
@@ -45,7 +47,23 @@ def play(roller=GameLogic.roll_dice):
                 kept_score.append(int(x))
             round_score += GameLogic.calculate_score(tuple(kept_score))
             print(f"You have {round_score} unbanked points and {6 - len(all_kept_dice)} dice remaining.")
-            
+            print("(r)oll again, (b)ank your points or (q)uit:")
+            choice = input("> ")
+            if choice == "q":
+                print(f"Thanks for playing. You earned {total_score} points.")
+                break
+            elif choice == "b":
+                total_score += round_score
+                print(f"You banked {round_score} in round {round_num}")
+                round_num += 1
+                print(f"Total score is {total_score} points")
+                all_kept_dice = []
+                round_score = 0
+                print(f"Starting Round {round_num}")
+            kept_score = []
+
+
+
 
 if __name__ == '__main__':
     welcome()
