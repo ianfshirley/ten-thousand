@@ -3,8 +3,7 @@
 ## Project: Ten Thousand
 
 ### Version 1 Authors: Ian F. Shirley / Dylan Cabral / Ricardo Soto / Angelos Kounavis
-### Version 2 Authors: Ian F. Shirley / Dylan Cabral / Aubrey Corsetti /
-###     Oliver Speir / Harper Foley
+### Version 2 Authors: Ian F. Shirley / Dylan Cabral / Aubrey Corsetti / Oliver Speir / Harper Foley
 
 #### Test
 - For Version 1: Used built-in tests from class GitHub to test roll_dice & 
