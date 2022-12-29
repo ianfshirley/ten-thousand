@@ -30,6 +30,9 @@ def play(roller=GameLogic.roll_dice):
             roll_list.append(x)
         print(f"*** {roll_string} ***")
         if GameLogic.calculate_score(tuple(roll_list)) == 0:
+
+            # zilched()
+
             print("You zilched!")
             round_num += 1
             print(f"Your total score is {total_score} points.")
@@ -59,6 +62,9 @@ def play(roller=GameLogic.roll_dice):
                 round_score = 0
                 print(f"Starting Round {round_num}")
             kept_score = []
+
+
+def zilched()
 
 
 if __name__ == '__main__':
