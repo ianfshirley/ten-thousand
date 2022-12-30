@@ -20,6 +20,12 @@ def play(roller=GameLogic.roll_dice):
     all_kept_dice = []
     kept_score = []
     round_score = 0
+
+
+
+    # define zilched function
+    def zilched():
+
     while playing:
         print(f"Rolling {6 - len(all_kept_dice)} dice...")
         roll_string = ""
@@ -64,7 +70,6 @@ def play(roller=GameLogic.roll_dice):
             kept_score = []
 
 
-def zilched()
 
 
 if __name__ == '__main__':
