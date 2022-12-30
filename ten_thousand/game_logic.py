@@ -44,3 +44,15 @@ class GameLogic:
                 score += score_dict[die] * 4
 
         return score
+
+    @staticmethod
+    def validate_keepers(dice_roll, dice_kept):
+        dice_roll_validation = Counter(dice_roll)
+        dice_kept_validation = Counter(dice_kept)
+
+        if len(dice_kept_validation) <= len(dice_roll_validation):
+            if all(dice_kept_validation[key] <= dice_roll_validation[key] for key in dice_kept_validation.keys()):
+                return True
+            return False
+        else:
+            return False
