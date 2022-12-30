@@ -26,9 +26,9 @@ def start():
             break
 
         total_points += round_score
-        round_number += 1
         print(f"You banked {round_score} points in round {round_number}")
         print(f"Total score is {total_points} points")
+        round_number += 1
 
     print(f"Thanks for playing. You earned {total_points} points")
 
